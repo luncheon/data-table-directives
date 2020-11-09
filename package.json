@@ -22,10 +22,10 @@
     "arrowParens": "avoid"
   },
   "scripts": {
-    "build": "tsc -p . && npm run build:js && npm run build:css",
+    "build": "npm run build:js && npm run build:css && npm run typecheck",
     "build:css": "esbuild --bundle --minify --outfile=styles.css src/styles.css",
     "build:js": "esbuild --bundle --minify --outfile=index.js src/index.ts",
-    "watch": "tsc -p . -w --preserveWatchOutput"
+    "typecheck": "tsc -p ."
   },
   "devDependencies": {
     "esbuild": "^0.8.5",
