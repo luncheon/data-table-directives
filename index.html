@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      input, select {
+        box-sizing: border-box;
+        width: 100%;
+        font: inherit;
+        height: 2em;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <table>
+      <caption>Tasks</caption>
+      <thead>
+        <tr>
+          <th data-table-sortable data-table-resizable>Title</th>
+          <th data-table-resizable>Description</th>
+          <th style="width: 6em">Status</th>
+          <th data-table-sortable style="width: 7em">Priority</th>
+          <th data-table-resizable>Remarks</th>
+        </tr>
+        <tr data-table-filter>
+          <td><input></td>
+          <td><input></td>
+          <td>
+            <select>
+              <option></option>
+              <option value="Pending">Pending</option>
+              <option value="Doing">Doing</option>
+              <option value="Done">Done</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option></option>
+              <option value="1: Low">1: Low</option>
+              <option value="2: Medium">2: Medium</option>
+              <option value="3: High">3: High</option>
+            </select>
+          </td>
+          <td><input></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sort</td><td>Implement sorting feature</td><td>Done</td><td>3: High</td><td></td></tr>
+        <tr><td>Filter</td><td>Implement filtering feature</td><td>Done</td><td>3: High</td><td></td></tr>
+        <tr><td>MultiSelect Filter</td><td>Implement filtering by multiple selection feature</td><td>Pending</td><td>2: Medium</td><td>(ui design is needed)</td></tr>
+        <tr><td>Resize Column</td><td>Implement resizing column feature</td><td>Done</td><td>2: Medium</td><td></td></tr>
+        <tr><td>Collapse Column</td><td>Implement temporarily hiding column feature</td><td>Pending</td><td>2: Medium</td><td>(ui design is needed)</td></tr>
+        <tr><td>Rearrange</td><td>Implement manual sorting feature</td><td>Pending</td><td>1: Low</td><td>(cumbersome)</td></tr>
+        <tr><td>Paging</td><td>Implement paging feature</td><td>Pending</td><td>1: Low</td><td>(hard)</td></tr>
+        <tr><td>Fix RowSpan Problem</td><td>Currently, using `rowspan` causes problems. Fix them.</td><td>Pending</td><td>1: Low</td><td>(hard)</td></tr>
+      </tbody>
+    </table>
+  </body>
+</html>

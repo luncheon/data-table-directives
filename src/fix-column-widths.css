@@ -1,0 +1,10 @@
+[data-table-column-width-fixed] {
+  table-layout: fixed;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+[data-table-column-width-fixed] th,
+[data-table-column-width-fixed] td {
+  width: 1px;
+  box-sizing: border-box;
+}

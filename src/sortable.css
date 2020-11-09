@@ -1,0 +1,22 @@
+[data-table-sortable] {
+  cursor: pointer;
+}
+[data-table-sortable]:hover {
+  opacity: 0.6;
+}
+[data-table-sortable]::after {
+  content: '↕︎';
+  display: inline-block;
+  margin-left: 0.25em;
+  opacity: 0.4;
+}
+[data-table-sortable]:hover::after,
+[data-table-sort-order]::after {
+  opacity: 0.8;
+}
+[data-table-sort-order='asc']::after {
+  content: '↑';
+}
+[data-table-sort-order='desc']::after {
+  content: '↓';
+}

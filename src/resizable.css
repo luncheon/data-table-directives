@@ -1,0 +1,21 @@
+@import './fix-column-widths.css';
+
+[data-table-resizable] {
+  position: relative;
+}
+[data-table-resizable]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  z-index: 1;
+  cursor: col-resize;
+}
+
+[data-table-resizing] {
+  cursor: col-resize;
+  -webkit-user-select: none;
+  user-select: none;
+}

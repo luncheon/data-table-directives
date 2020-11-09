@@ -1,0 +1,34 @@
+{
+  "name": "data-table-directives",
+  "version": "0.0.0",
+  "description": "Declaratively adds some features to `<table>` elements.",
+  "private": true,
+  "license": "WTFPL",
+  "repository": "luncheon/data-table-directives",
+  "keywords": [
+    "table",
+    "datatable",
+    "data-table",
+    "datagrid",
+    "data-grid"
+  ],
+  "main": "index.js",
+  "prettier": {
+    "printWidth": 140,
+    "endOfLine": "lf",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "semi": false,
+    "arrowParens": "avoid"
+  },
+  "scripts": {
+    "build": "tsc -p . && npm run build:js && npm run build:css",
+    "build:css": "esbuild --bundle --minify --outfile=styles.css src/styles.css",
+    "build:js": "esbuild --bundle --minify --outfile=index.js src/index.ts",
+    "watch": "tsc -p . -w --preserveWatchOutput"
+  },
+  "devDependencies": {
+    "esbuild": "^0.8.5",
+    "typescript": "^4.0.5"
+  }
+}

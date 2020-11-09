@@ -1,0 +1,5 @@
+@import './fix-column-widths.css';
+
+[data-table-row-hidden-by] {
+  display: none !important;
+}
